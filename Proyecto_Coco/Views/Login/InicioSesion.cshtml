@@ -8,25 +8,39 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet"type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/74b80dc0de.js" crossorigin="anonymous"></script>
     <title>Iniciar Sesion</title>
 </head>
 <body>
+    <style>
+        .Login_User {
+            position: relative;
+            left: 550px;
+            top: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
     <div class="Login_User">
+        <img src="~/Content/Img/Logo.png" width="200"/>
         <div class="row">
             <form action="" method="post">
                 <p class="text-primary">Usuario: <input type="text" name="" /></p>
                 <p class="text-primary">Contraseña: <input type="text" name="" /></p>
                 <div class="row">
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-success">Acceder</button>
+                        <button type="submit" class="btn btn-success">Acceder  <i class="fa-sharp fa-solid fa-arrow-right"></i></button>
                     </div>
+                    <br />
+                    <br />
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-light">Cancelar</button>
+                        <button type="submit" class="btn btn-light">Cancelar    <i class="fa-sharp fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
             </form>
         </div>
+        <br />
+        <a href="#">¿Olvidaste tu contraseña?</a>
     </div>
 </body>
 </html>

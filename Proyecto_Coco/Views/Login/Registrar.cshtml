@@ -9,10 +9,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/74b80dc0de.js" crossorigin="anonymous"></script>
     <title>Olvidastes tu contraseña</title>
 </head>
 <body>
-    <div> 
+    <style>
+        .Registrarse{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position:relative;
+            left:500px;
+            top:100px;
+        }
+    </style>
+    <div class="Registrarse">
+        <img src="~/Content/Img/Logo.png" width="200" />
+        <div class="row">
+            <p class="text-primary">Ingrese su nombre de usuario: <input type="text" name="" /></p>
+            <p class="text-primary">Ingrese nueva contraseña: <input type="text" name="" /></p>
+            <p class="text-primary">Confirmar Contraseña: <input type="password" name="" /></p>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary">Reestablecer Contraseña</button>
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-success">Cancelar</button>
+            </div>
     </div>
+</div>
 </body>
 </html>
