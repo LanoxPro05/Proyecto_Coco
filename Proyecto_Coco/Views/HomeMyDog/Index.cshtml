@@ -10,10 +10,16 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/74b80dc0de.js" crossorigin="anonymous"></script>
+
     <title>Principal</title>
 </head>
 <body>
     <style>
+        h2{
+            position:relative;
+            bottom:270px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
         h1{
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             position:relative;
@@ -35,9 +41,7 @@
     </div>
     <h1 class="text-primary text-center">Bienvenido a la clinica veterinaria</h1>
     <div class="salir">
-        <a href="@Url.Action("InicioSesion","Login")"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-reverse-fill" viewBox="0 0 16 16">
-    <path d="M0 3a2 2 0 0 1 2-2h7.08a2 2 0 0 1 1.519.698l4.843 5.651a1 1 0 0 1 0 1.302L10.6 14.3a2 2 0 0 1-1.52.7H2a2 2 0 0 1-2-2V3zm9.854 2.854a.5.5 0 0 0-.708-.708L7 7.293 4.854 5.146a.5.5 0 1 0-.708.708L6.293 8l-2.147 2.146a.5.5 0 0 0 .708.708L7 8.707l2.146 2.147a.5.5 0 0 0 .708-.708L7.707 8l2.147-2.146z" />
-</svg>Salir</a>
+        <button class="btn btn-block btn-dark" type="button">Salir</button>
     </div>
     <div class="Form_Cita">
         <div class="container">
@@ -49,7 +53,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Email</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
@@ -66,8 +70,10 @@
                 <button type="submit" class="btn btn-primary">Realizar Cita <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
     <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
 </svg></button>
+                <button type="button" class="btn btn-block btn-success">Ir al menu principal <i class="fa-solid fa-house-user"></i></button>
             </form>
         </div>
     </div>
+    <h2 class="text-dark text-center">Derechos reservados: Emerson Humberto Carpaño 2023</h2>
 </body>
 </html>
