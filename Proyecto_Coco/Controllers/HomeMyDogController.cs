@@ -13,5 +13,9 @@ namespace Proyecto_Coco.Controllers
         {
             return View();
         }
+        public ActionResult EmployeeRegistration()
+        {
+            return View();
+        }
     }
 }

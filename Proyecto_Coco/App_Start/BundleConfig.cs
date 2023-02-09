@@ -25,6 +25,21 @@ namespace Proyecto_Coco
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/datatables.js").Include(
+                 "~/Scripts/datatables.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/datatables.css").Include(
+                  "~/Scripts/datatables.js"));
+
+
+
+            //Plugins datatables jquery css
+            bundles.Add(new StyleBundle("~/Content/Plugins/css").Include(
+                     "~/Content/datatables/css/jquery.dataTables.css"));
+            //Plugins datatables jquery js
+            bundles.Add(new StyleBundle("~/Content/Plugins/js").Include(
+                     "~/Content/datatables/js/jquery.dataTables.min.js"));
         }
     }
 }

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/74b80dc0de.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    h2 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .TableEmployees {
+        position: relative;
+        left: 100px;
+        bottom: 430px;
+    }
+
+    h2 {
+        position: relative;
+        left: 150px;
+        bottom: 430px;
+    }
+</style>
+    <div id="Img">
+        <img src="~/Content/Img/sitting-pet-dog-cat-puppy-dogs-clipart-dog-1125115.png" width="300" />
+    </div>
+<h2 class="text-center">Registro de empleados</h2>
+<div class="TableEmployees">
+    <div class="container-fluid">
+        <div class="container">
+            <table id="MyDataEmployees" class="display">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Cargo</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button><i class="fa-sharp fa-solid fa-eraser"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function (){
+            $('#MyDataEmployees').DataTable();
+        });
+    </script>
+}
+
