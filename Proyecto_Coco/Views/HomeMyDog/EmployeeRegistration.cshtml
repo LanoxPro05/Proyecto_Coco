@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Proyecto_Coco.tblEmpleados>
 @{
     ViewBag.Title = "EmployeeRegistration";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,6 +11,7 @@
     h2 {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+
     .TableEmployees {
         position: relative;
         left: 100px;
@@ -22,10 +23,11 @@
         left: 140px;
         bottom: 430px;
     }
-    #Img{
-        position:relative;
-        right:120px;
-        bottom:60px;
+
+    #Img {
+        position: relative;
+        right: 120px;
+        bottom: 60px;
     }
 </style>
 <div id="Img">
@@ -47,24 +49,29 @@
                         <th>Eliminar</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><button><i class="fa-solid fa-pen-to-square"></i></button></td>
-                        <td><button><i class="fa-sharp fa-solid fa-eraser"></i></button></td>
-                    </tr>
-                </tbody>
+                @{
+                    foreach (var odataEmployees in Model)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@odataEmployees.Id</td>
+                                <td>@odataEmployees.Apellido</td>
+                                <td>@odataEmployees.Nombre</td>
+                                <td>@odataEmployees.Telefono</td>
+                                <td>@odataEmployees.Cargo</td>
+                                <td><button><i class="fa-solid fa-pen-to-square"></i></button></td>
+                                <td><button><i class="fa-sharp fa-solid fa-eraser"></i></button></td>
+                            </tr>
+                        </tbody>
+                    }
+                }
             </table>
         </div>
     </div>
 </div>
 @section scripts{
     <script>
-        $(document).ready(function (){
+        $(document).ready(function () {
             $('#MyDataEmployees').DataTable();
         });
     </script>

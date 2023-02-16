@@ -8,6 +8,8 @@ namespace Proyecto_Coco.Controllers
 {
     public class HomeMyDogController : Controller
     {
+        //Nuestro contexto de datos
+        ModeloDataContext model = new ModeloDataContext();
         // GET: HomeMyDog
         public ActionResult Index()
         {
@@ -15,7 +17,8 @@ namespace Proyecto_Coco.Controllers
         }
         public ActionResult EmployeeRegistration()
         {
-            return View();
+            List<tblEmpleados> tblEmpleados = model.tblEmpleados.ToList();
+            return View(tblEmpleados);
         }
     }
 }
