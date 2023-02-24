@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/74b80dc0de.js" crossorigin="anonymous"></script>
+    <title>Modificar datos del empleado</title>
+</head>
+<body>
+    <style>
+        h2{
+            position:relative;
+            top:15px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #Regresar{
+            position:relative;
+            left:20px;
+        }
+        .Img{
+            position:relative;
+            left:900px;
+        }
+        .form{
+            position:relative;
+            bottom:500px;
+        }
+        .UpdateEmployee{
+            position:relative;
+            left:50px;
+        }
+        body{
+            background-color:cadetblue;
+        }
+    </style>
+    <h2 class="text-center">Modificar datos del empleado</h2>
+    <div id="Regresar">
+        <button class="btn btn-success"><i class="fa-solid fa-door-open"></i></button>
+    </div>
+    <div class="Img">
+        <img src="~/Content/Img/sitting-pet-dog-cat-puppy-dogs-clipart-dog-1125115.png" width="400"/>
+    </div>
+    <div class="form">
+        <div class="container">
+            <div class="row">
+                <form action="" method="post">
+                    <label>Apellido: <input type="text" class="form-control" name="" id="" required/></label>
+                    <br />
+                    <br />
+                    <label>Nombre: <input type="text" class="form-control" name="" id="" required/></label>
+                    <br />
+                    <br />
+                    <label>Telefono: <input type="text"  class="form-control" name="" id="" required/></label>
+                    <br />
+                    <br />
+                    <label>Cargo: <input type="text"  class="form-control" name="" id="" required/></label>
+                    <br />
+                    <br />
+                    <div class="UpdateEmployee">
+                        <button type="submit" class="btn btn-primary">Modificar empleado</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

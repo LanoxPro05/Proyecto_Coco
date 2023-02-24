@@ -45,11 +45,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -123,6 +131,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeMyDogController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\Procedure_EmployeesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -154,6 +163,7 @@
     <Content Include="Content\datatables.min.css" />
     <Content Include="Content\datatables\css\jquery.dataTables.css" />
     <Content Include="Content\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Img\empleados.png" />
     <Content Include="Content\Img\Logo.png" />
     <Content Include="Content\Img\sitting-pet-dog-cat-puppy-dogs-clipart-dog-1125115.png" />
     <Content Include="favicon.ico" />
@@ -223,6 +233,9 @@
     <Content Include="Views\Login\Registrar.cshtml" />
     <Content Include="Views\HomeMyDog\Index.cshtml" />
     <Content Include="Views\HomeMyDog\EmployeeRegistration.cshtml" />
+    <Content Include="Views\Procedure_Employees\Create_Employees.cshtml" />
+    <Content Include="Views\Procedure_Employees\Edit.cshtml" />
+    <Content Include="Views\Procedure_Employees\DeleteEmployees.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -235,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

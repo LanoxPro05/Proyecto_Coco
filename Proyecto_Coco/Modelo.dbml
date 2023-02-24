@@ -9,4 +9,23 @@
       <Column Name="Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.sp_Actualizar" Method="sp_Actualizar">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="Cargo" Parameter="cargo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_Agregar" Method="sp_Agregar">
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="Cargo" Parameter="cargo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_Eliminar" Method="sp_Eliminar">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

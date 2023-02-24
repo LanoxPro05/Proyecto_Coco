@@ -32,3 +32,38 @@ Cargo Varchar(50),
 Insert into tblEmpleados Values('Castro Martinez','Josue Maldini','8932-0121','Veterinario')
 
 Select * from tblEmpleados
+
+--Creamos los procedimientos a utilizar en el sistema
+Create procedure sp_Agregar
+@Apellido Varchar(50),
+@Nombre Varchar(50),
+@Telefono Varchar(9),
+@Cargo Varchar(50)
+as
+begin
+	Insert into tblEmpleados Values(@Apellido,@Nombre,@Telefono,@Cargo)
+	print 'DATOS INGRESADOS CORRECTAMENTE!!'
+End
+
+Create procedure sp_Actualizar
+@Id Int,
+@Apellido Varchar(50),
+@Nombre Varchar(50),
+@Telefono Varchar(9),
+@Cargo Varchar(50)
+as
+begin
+Update tblEmpleados set Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Cargo = @Cargo
+Where Id = @Id
+print 'DATOS MODIFICADOS CORRECTAMENTE!!!'
+End
+
+Drop procedure sp_Eliminar
+exec sp_Actualizar 1 ,'Emerson Humberto','Carpaño Granados','7402-0085','Programador'
+
+Create procedure sp_Eliminar
+@Id int
+as begin
+ Delete from tblEmpleados where Id = @Id
+ print 'DATOS ELIMINADOS CORRECTAMENTE!!'
+ End
